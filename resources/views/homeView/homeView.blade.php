@@ -1,38 +1,53 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Crowd Disaster Management</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            text-align: center;
+            padding: 10px;
+            background-color: #f8f9fa;
+        }
+        .main {
+            margin: 20px;
+        }
+    </style>
 </head>
 <body>
-
-	<div class="content" style="height: 1000px;">
-        <div class="row">
-        <div class="col-md-6">Helo</div>
-        <div class="col-md-6">Helo1</div>
+    <div class="content">
+        <div class="container">
+            <div class="header">
+                <h1>Crowd Disaster Management</h1>
+                <p>Ensuring safety in crowded places</p>
+            </div>
+            <div class="main">
+                <h2>Welcome to our website</h2>
+                <p>Our mission is to provide effective disaster management solutions for crowded places. We aim to prevent and mitigate the impact of disasters through innovative technology and effective crowd management strategies.</p>
+            </div>
+        </div>  
     </div>
-  <!-- Your content here -->
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-  <p>This is a sample content. Scroll down to see the fixed header in action.</p>
-  <!-- Repeat content to simulate scrolling -->
-  <!-- Add more content if needed -->
-</div>
 </body>
 </html>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+  integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="<?=base_url('public/assets/js/common.js')?>"></script>
+<script type="text/javascript">
+        // $(document).ready(function() {
+            var pageType = "home";
+        // })
+</script>
+    <script src="<?=base_url('/public/assets/libraries/bootbox.all.js')?>"></script>
+<script src="<?=base_url('/public/assets/libraries/bootbox.all.min.js')?>"></script>
+<script src="<?=base_url('public/assets/js/home.js')?>"></script>
+
