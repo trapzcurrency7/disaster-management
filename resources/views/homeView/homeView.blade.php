@@ -6,7 +6,12 @@
 	<title>Home</title>
 </head>
 <body>
+
 	<div class="content" style="height: 1000px;">
+        <div class="row">
+        <div class="col-md-6">Helo</div>
+        <div class="col-md-6">Helo1</div>
+    </div>
   <!-- Your content here -->
   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
   tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

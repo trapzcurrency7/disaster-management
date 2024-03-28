@@ -2,10 +2,15 @@
 
 namespace App\Http\Controllers;
 
-abstract class Controller
+class Controller
 {
+
+   
     static public function checkTheName($value='')
     {
         print_r('Hello');
+    }
+    static public function base_url(){
+        return url()->current();
     }
 }
