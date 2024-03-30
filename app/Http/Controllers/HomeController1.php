@@ -10,8 +10,6 @@ class HomeController1 extends Controller{
 	}
 
 	public function home(){
-		
-		
 		$data['template'] = 'homeView.homeView';
 		return view('include.mainLayout',$data);
 	}	

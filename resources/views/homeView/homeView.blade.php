@@ -16,11 +16,51 @@
         .main {
             margin: 20px;
         }
+        .element_input{
+            display: flex;
+            flex-direction: column;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 2px 5px 2px 5px;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .element_input:focus{
+            border: 1px;
+           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        }
+
     </style>
 </head>
 <body>
     <div class="content">
         <div class="container">
+            <div class="row element_card">
+                <div class="row element_header">
+                    <div class="col-md-6" >
+                        <h4 class="mt-2">Hello</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <a href="javascript:void(0)" class="btn_save"> Save</a>
+                    </div>
+                </div>
+                <div class="row element_body">
+                    <div class="col-md-6">
+                        <label for="name" class="label">Pincode</label>
+                        <input type="text" class="element_input" name="pincode" id="pincode">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="name" class="label">Street Address</label>
+                        <input type="text" class="element_input" name="stAdress" id="stAdress">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="name" class="label">Phone</label>
+                        <input type="number" class="element_input" name="stAdress" id="stAdress">
+                    </div>
+                </div>
+            </div>
+            
             <div class="header">
                 <h1>Crowd Disaster Management</h1>
                 <p>Ensuring safety in crowded places</p>
@@ -29,6 +69,23 @@
                 <h2>Welcome to our website</h2>
                 <p>Our mission is to provide effective disaster management solutions for crowded places. We aim to prevent and mitigate the impact of disasters through innovative technology and effective crowd management strategies.</p>
             </div>
+             <div class="header">
+                <h1>Crowd Disaster Management</h1>
+                <p>Ensuring safety in crowded places</p>
+            </div>
+            <div class="main">
+                <h2>Welcome to our website</h2>
+                <p>Our mission is to provide effective disaster management solutions for crowded places. We aim to prevent and mitigate the impact of disasters through innovative technology and effective crowd management strategies.</p>
+            </div>
+             <div class="header">
+                <h1>Crowd Disaster Management</h1>
+                <p>Ensuring safety in crowded places</p>
+            </div>
+            <div class="main">
+                <h2>Welcome to our website</h2>
+                <p>Our mission is to provide effective disaster management solutions for crowded places. We aim to prevent and mitigate the impact of disasters through innovative technology and effective crowd management strategies.</p>
+            </div>
+           
         </div>  
     </div>
 </body>

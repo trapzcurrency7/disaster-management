@@ -8,4 +8,7 @@ $(document).ready(function() {
 		message:"This pop-up will ask the user where he is volunteer or victim",
 		closeButton:false,
 	})
+	$('.element_header').on('click',function() {
+		console.log("hello");
+	})
 })

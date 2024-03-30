@@ -67,7 +67,7 @@
 		<div class="container">
 		    <h1>Contact Us</h1>
 		    <p class="pClass">If you have any questions or feedback, please feel free to contact us using the form below:</p>
-		    <form action="#" method="post">
+		    <form action="javascript:void(0)" method="post">
 	      		<label for="name">Your Name:</label>
 		      	<input type="text" id="name" name="name" required>
 		      	<label for="email">Your Email:</label>

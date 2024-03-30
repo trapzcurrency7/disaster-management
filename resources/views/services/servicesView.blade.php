@@ -10,10 +10,7 @@
       margin: 0;
       padding: 0;
     }
-    .container {
-      max-width: 800px;
-      padding: 0 20px;
-    }
+   
     h1, h2 {
       text-align: center;
       margin-bottom: 30px;
