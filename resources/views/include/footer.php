@@ -7,14 +7,7 @@
         /* Basic styling for the header menu */
         
         /* Basic styling for the footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            bottom: 0;
-            width: 100%;
-        }
+        
     </style>
 </head>
 <body>

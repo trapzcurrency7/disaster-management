@@ -30,22 +30,35 @@
            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
         }
+        .headHover:hover{
+            color: red;
+            border-bottom: 1px solid red;
+        }
+        .headHover{
+            display: inline;
+            margin: 1rem;
+        }    
+        .heading{
+            padding: 0.5rem 0rem   ;
+        }           
 
     </style>
-</head>
+</head> 
 <body>
     <div class="content">
         <div class="container">
             <div class="row element_card">
                 <div class="row element_header">
                     <div class="col-md-6" >
-                        <h4 class="mt-2">Hello</h4>
+                        <div class="heading">
+                            <h4 class="mt-2 headHover">Hello</h4>
+                        </div>
                     </div>
                     <div class="col-md-6">
                         <a href="javascript:void(0)" class="btn_save"> Save</a>
                     </div>
                 </div>
-                <div class="row element_body">
+                <div class="row element_body" style="display: none;">
                     <div class="col-md-6">
                         <label for="name" class="label">Pincode</label>
                         <input type="text" class="element_input" name="pincode" id="pincode">
