@@ -15,8 +15,7 @@ class AboutController extends Controller{
 	public function home(){
 		
 		$f = $this->newModel->newf2();
-		print_r($f);
-		exit;
+	
 		$data['template'] = 'about.about';
 		return view('include.mainLayout',$data);
 	}
