@@ -13,4 +13,5 @@ class Controller
     static public function base_url(){
         return url()->current();
     }
+  
 }

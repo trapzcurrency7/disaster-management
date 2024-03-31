@@ -4,13 +4,17 @@ namespace App\Http\Controllers;
 
 class HomeController1 extends Controller{
 
-	public function _contruct(){
-		parent::contstruct();
-		$controller = $this->controller;
+	public function __construct(){
+		$this->controller = new Controller;
+		$this->aboutController = new AboutController;
 	}
 
 	public function home(){
-		$data['template'] = 'homeView.homeView';
-		return view('include.mainLayout',$data);
+		$val = $this->aboutController->h2();
+
+		
+		$template['template'] = 'homeView.homeView';
+		return view('include.mainLayout',$template);
 	}	
+	
 }
