@@ -6,7 +6,6 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\ContactController;
 
-
 Route::get('/', [HomeController1::class,'home']);
 Route::get('/about', [AboutController::class,'home']);
 Route::get('/services', [ServicesController::class,'home']);
