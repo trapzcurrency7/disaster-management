@@ -3,15 +3,31 @@
         margin: 0;
         padding: 0;
     }
-    header {
-        position: fixed; /* Fixed position */
-        top: 0; /* Position at the top */
-        width: 100%; /* Full width */
-        background-color: #333; /* Background color */
-        color: #fff; /* Text color */
-        padding: 10px 0; /* Padding */
-        text-align: center; /* Center align text */
+    
+    header{
+        border: 2px solid black;        
+        background-color: black;
     }
+
+    header nav{
+        display: flex;
+        margin: 1rem 0rem;
+        justify-content: center;
+    }
+    header nav div{
+    }
+
+    header nav div a{
+        text-decoration: none;
+        color: black;
+        
+        margin: 0rem 1rem;
+        background-color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+    }
+
+   
     footer {
         background-color: #333;
         color: #fff;

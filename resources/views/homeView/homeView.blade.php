@@ -8,100 +8,123 @@
         body {
             font-family: Arial, sans-serif;
         }
-        .header {
-            text-align: center;
-            padding: 10px;
-            background-color: #f8f9fa;
-            margin-top: 1rem;
-            border: 1px solid black;
+        
+        .container .main-card .card-bottom label{
+            display: block;
         }
-        .main {
-            margin: 20px;
+
+        .container{
+            display: grid;
+            place-items: center;
+            
         }
-        .element_input{
+        .main-card{
             display: flex;
             flex-direction: column;
-            border: 1px solid black;
-            border-radius: 10px;
-            padding: 2px 5px 2px 5px;
-            width: 100%;
-            margin-bottom: 10px;
+            width: 80%;
+            background-color: rgb(39, 38, 38);
+            padding: 1rem;
+            margin: 2rem 0rem;
+            border-radius: 1rem;
         }
-        .element_input:focus{
-            border: 1px;
-           box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
+        .card-top{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-bottom: 2px solid white;
         }
-        .headHover:hover{
-            color: red;
-            border-bottom: 1px solid red;
-        }
-        .headHover{
-            display: inline;
-            margin: 1rem;
-        }    
-        .heading{
-            padding: 0.5rem 0rem   ;
-        }           
 
+        .card-bottom{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin: 1.5rem 1rem;
+        }
+        
+        input{
+            width: 90%;
+            margin-bottom: 2rem;
+            border-radius: 0.5rem;
+            border: none;
+            padding: 0.2rem 0.5rem;
+        }
+        button{
+            padding: 0.4rem 3rem;
+            border-radius: 0.5rem;
+            background-color: whitesmoke;
+            color: black;
+            float: right;
+        }
+        
+        .greeting h1, label{
+            color: white;
+        }
+
+        .display-update{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .display-right{
+            display: flex;
+            align-items: center;
+        }
+
+        .update-card{
+            width: 80%;
+            padding: 1rem 2rem;
+            border: 2px solid black ;
+        }
+
+        .heading {
+            border-bottom: 2px solid black;
+        }
     </style>
 </head> 
 <body>
-    <div class="content">
-        <div class="container">
-            <div class="row element_card">
-                <div class="row element_header">
-                    <div class="col-md-6" >
-                        <div class="heading">
-                            <h4 class="mt-2 headHover">Hello</h4>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <a href="javascript:void(0)" class="btn_save"> Save</a>
-                    </div>
+    <div class="container">
+        <div class="main-card">
+            <div class="card-top">
+                <div class="greeting">
+                    <h1>Help!!</h1>
                 </div>
-                <div class="row element_body" style="display: none;">
-                    <div class="col-md-6">
-                        <label for="name" class="label">Pincode</label>
-                        <input type="text" class="element_input" name="pincode" id="pincode">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="name" class="label">Street Address</label>
-                        <input type="text" class="element_input" name="stAdress" id="stAdress">
-                    </div>
-                    <div class="col-md-6">
-                        <label for="name" class="label">Phone</label>
-                        <input type="number" class="element_input" name="stAdress" id="stAdress">
-                    </div>
+                <div class="victim-button">
+                    <button>Save</button>
                 </div>
             </div>
-            
-            <div class="header">
-                <h1>Crowd Disaster Management</h1>
-                <p>Ensuring safety in crowded places</p>
+            <div class="card-bottom">
+                <div class="address">
+                    <label for="address"><strong>Address</strong></label>
+                    <input type="text" name="" id="" placeholder="Enter your address">
+                </div>
+                <div class="pincode">
+                    <label for="pincode"><strong>Pincode</strong></label>
+                    <input type="text" name="" id="" placeholder="Enter your pincode">
+
+                </div>
+                <div class="disaster-type">
+                    <label for="disaster type"><strong>Disaster Type</strong></label>
+                    <input type="text" name="" id="" placeholder="Enter the disaster type">
+
+                </div>
             </div>
-            <div class="main">
-                <h2>Welcome to our website</h2>
-                <p>Our mission is to provide effective disaster management solutions for crowded places. We aim to prevent and mitigate the impact of disasters through innovative technology and effective crowd management strategies.</p>
+        </div>
+
+        <div class="update-card">
+            <div class="heading">
+                <h1>Scroll for Updates</h1>
             </div>
-             <div class="header">
-                <h1>Crowd Disaster Management</h1>
-                <p>Ensuring safety in crowded places</p>
+
+            <div class="display-update">
+                <div class="display-left">
+                    <h1>Pune</h1>
+                    <h2>411036</h2>
+                    <h3>Disaster Type</h3>
+                </div>
+                <div class="display-right">
+                    <h1>Number of Helpers: 7</h1>
+                </div>
             </div>
-            <div class="main">
-                <h2>Welcome to our website</h2>
-                <p>Our mission is to provide effective disaster management solutions for crowded places. We aim to prevent and mitigate the impact of disasters through innovative technology and effective crowd management strategies.</p>
-            </div>
-             <div class="header">
-                <h1>Crowd Disaster Management</h1>
-                <p>Ensuring safety in crowded places</p>
-            </div>
-            <div class="main">
-                <h2>Welcome to our website</h2>
-                <p>Our mission is to provide effective disaster management solutions for crowded places. We aim to prevent and mitigate the impact of disasters through innovative technology and effective crowd management strategies.</p>
-            </div>
-           
-        </div>  
+        </div>
     </div>
 </body>
 </html>
