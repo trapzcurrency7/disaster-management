@@ -3,11 +3,15 @@
 /public/build
 /public/hot
 /public/storage
+/vendor
+.htaccess
 /storage/*.key
 .env
 .env.backup
 .env.production
 .phpunit.result.cache
+composer.json
+composer.lock
 Homestead.json
 Homestead.yaml
 auth.json
