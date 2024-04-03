@@ -12,6 +12,8 @@
             text-align: center;
             padding: 10px;
             background-color: #f8f9fa;
+            margin-top: 1rem;
+            border: 1px solid black;
         }
         .main {
             margin: 20px;
