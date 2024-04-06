@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController1;
 use App\Http\Controllers\AboutController;
@@ -19,4 +20,8 @@ Route::get('/services', [ServicesController::class,'home']);
 
 // Contact
 Route::get('/contact', [ContactController::class,'home']);
+
+Route::get('/admin', [AdminController::class,'admin']);
+
+
 
