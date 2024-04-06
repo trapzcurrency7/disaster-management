@@ -3,11 +3,7 @@ $(document).ready(function() {
 	if(pageType=="home"){
 		$('#home').css('background-color','red');
 	}
-
-	// bootbox.alert({
-	// 	message:"This pop-up will ask the user where he is volunteer or victim",
-	// 	closeButton:false,
-	// })
+	
 	$('.headrM').on('click',function() {
 
 		if($('.card-bottom').is(":hidden")){
@@ -20,4 +16,36 @@ $(document).ready(function() {
 
 		console.log("hello");
 	})
-	$('.main-card').fadeIn(2000);})
+	$('.main-card').fadeIn(2000);
+	$('.saveVictimForm').click(function(){
+		saveVictimForm();
+	})
+
+})
+
+function saveVictimForm() {
+	var formData = $('#formData').serializeArray();
+	var data = {};
+
+	$.each(formData,function(i,row) {
+		data[row.name]=row.value	
+	});
+	console.log($('#csrf').val());
+
+	$.ajax({
+			url:'http://localhost/disaster-management/saveVictimForm',
+			data: {
+			        "_token": "{{ csrf_token() }}",
+			        "id": "id"
+			        },
+			headers:{
+				'X-CSRF-TOKEN':$('#csrf').val()
+			},
+			type:'post',
+			success:function(response) {
+				console.log(response);
+
+			}
+		});
+}
+

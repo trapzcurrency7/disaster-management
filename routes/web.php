@@ -6,12 +6,17 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServicesController;
 use App\Http\Controllers\ContactController;
 
-Route::get('/', [HomeController1::class,'home']);
-Route::get('/about', [AboutController::class,'home']);
-Route::get('/services', [ServicesController::class,'home']);
-Route::get('/contact', [ContactController::class,'home']);
-// Route::get('/sourav', function (){
-//     return view('sourav/sourav');
-// });
 
+Route::get('/', [HomeController1::class,'home']);
+Route::post('/saveVictimForm', [HomeController1::class,'saveVictimForm']);
+
+// About
+Route::get('/about', [AboutController::class,'home']);
+
+// Services
+Route::get('/services', [ServicesController::class,'home']);
+
+
+// Contact
+Route::get('/contact', [ContactController::class,'home']);
 

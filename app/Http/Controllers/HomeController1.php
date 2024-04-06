@@ -17,5 +17,10 @@ class HomeController1 extends Controller{
 		// $data['template'] = 'homeView.homeView';
 		// return view('include.mainLayout',$data);
 	}	
+	public function saveVictimForm(){
+		print_r($_POST);
+		exit;
+
+	}
 	
 }

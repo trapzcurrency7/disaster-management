@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta name="csrf-token" content="<?=  csrf_token()?>">
+    <input type="hidden" id="csrf" name="" value="<?=csrf_token()?>">
     <title>Crowd Disaster Management</title>
     <style>
         body {
@@ -18,6 +19,7 @@
             place-items: center;
             
         }
+
         .main-card{
             display: flex;
             flex-direction: column;
@@ -37,16 +39,16 @@
         .card-bottom{
             display: grid;
             grid-template-columns: 1fr 1fr;
-            margin: 1.5rem 1rem;
+                margin: 1.5rem 1rem;
         }
         .headrM:hover{
             color: red;
         }
         
         input{
-            width: 90%;
+            width: 98%;
             margin-bottom: 2rem;
-            border-radius: 0.5rem;
+            border-radius: 0.5rem;  
             border: none;
             padding: 0.2rem 0.5rem;
         }
@@ -62,9 +64,20 @@
             color: white;
         }
 
+        form {
+            display: grid;
+            grid-template-columns: 1fr 1fr  ;
+            align-items: center;
+            justify-content: center;
+        }
+
         .display-update{
             display: grid;
             grid-template-columns: 1fr 1fr;
+        }
+        .victimForm{
+            display: grid;
+            grid-template-columns: 1fr;
         }
 
         .display-right{
@@ -91,24 +104,26 @@
                     <h1 class="headrM" style="display: inline;">Help!!</h1>
                 </div>
                 <div class="victim-button">
-                    <button>Save</button>
+                    <button class=" saveVictimForm">Save</button>
                 </div>
             </div>
-            <div class="card-bottom">
-                <div class="address">
-                    <label for="address"><strong>Address</strong></label>
-                    <input type="text" name="" id="" placeholder="Enter your address">
-                </div>
-                <div class="pincode">
-                    <label for="pincode"><strong>Pincode</strong></label>
-                    <input type="text" name="" id="" placeholder="Enter your pincode">
+            <div class="card-bottom victimForm">
+                <form id="formData">
 
-                </div>
-                <div class="disaster-type">
-                    <label for="disaster type"><strong>Disaster Type</strong></label>
-                    <input type="text" name="" id="" placeholder="Enter the disaster type">
+                    <div class="address">
+                        <label for="address"><strong>Address</strong></label>
+                        <input type="text" class="address1" name="address" id="" placeholder="Enter your address">
+                    </div>
+                    <div class="pincode">
+                        <label for="pincode"><strong>Pincode</strong></label>
+                        <input type="text" name="pincode" id="" placeholder="Enter your pincode">
 
-                </div>
+                    </div>
+                    <div class="disaster-type">
+                        <label for="disaster type"><strong>Disaster Type</strong></label>
+                        <input type="text" name="disasterType" id="" placeholder="Enter the disaster type">
+                    </div>
+                </form>
             </div>
         </div>
 
