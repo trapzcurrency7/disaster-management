@@ -39,6 +39,9 @@
             grid-template-columns: 1fr 1fr;
             margin: 1.5rem 1rem;
         }
+        .headrM:hover{
+            color: red;
+        }
         
         input{
             width: 90%;
@@ -82,10 +85,10 @@
 </head> 
 <body>
     <div class="container">
-        <div class="main-card">
+        <div class="main-card" style="display:none;">
             <div class="card-top">
                 <div class="greeting">
-                    <h1>Help!!</h1>
+                    <h1 class="headrM" style="display: inline;">Help!!</h1>
                 </div>
                 <div class="victim-button">
                     <button>Save</button>
