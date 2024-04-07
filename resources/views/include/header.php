@@ -32,7 +32,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="<?=  csrf_token()?>">
+    <input type="hidden" id="csrfTokenId" name="" value="<?=csrf_token()?>">
+    <meta name="csrf-token" content="<?=csrf_token()?>">
     <title>Disaster Source Management</title>
     <style>
         /* Basic styling for the footer */
@@ -55,3 +56,7 @@
 <!-- Your page content goes here -->
 
 </html>
+<script src="<?=base_url('public/assets/js/common.js')?>"></script>
+<script>
+    var base_url = "<?=base_url()?>";
+</script>

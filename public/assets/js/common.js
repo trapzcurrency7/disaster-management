@@ -1,4 +1,14 @@
+
+
 	$(document).ready(function() {
+
+		// Do not touch this
+		$.ajaxSetup({
+		    beforeSend: function (xhr)
+		    {
+		       xhr.setRequestHeader("X-CSRF-TOKEN",$('#csrfTokenId').val());        
+		    }
+		});
 
 		if(pageType=="home"){
 			$('#home').css({'background-color':'red',

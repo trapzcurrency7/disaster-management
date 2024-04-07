@@ -3,7 +3,6 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="<?=  csrf_token()?>">
-    <input type="hidden" id="csrf" name="" value="<?=csrf_token()?>">
     <title>Crowd Disaster Management</title>
     <style>
         body {
@@ -47,7 +46,15 @@
         
         input{
             width: 98%;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
+            border-radius: 0.5rem;  
+            border: none;
+            padding: 0.2rem 0.5rem;
+        }
+        select{
+            height: 29px;
+            width: 98%;
+            margin-bottom: 1rem;
             border-radius: 0.5rem;  
             border: none;
             padding: 0.2rem 0.5rem;
@@ -78,6 +85,7 @@
         .victimForm{
             display: grid;
             grid-template-columns: 1fr;
+            padding: 0;
         }
 
         .display-right{
@@ -121,7 +129,13 @@
                     </div>
                     <div class="disaster-type">
                         <label for="disaster type"><strong>Disaster Type</strong></label>
-                        <input type="text" name="disasterType" id="" placeholder="Enter the disaster type">
+                          <select name="disasterType">
+                            <option value="0">Select</option>
+                            <option value="1">Earthquake</option>
+                            <option value="2">Tornado</option>
+                            <option value="3">Flood</option>
+                            <option value="100">Others</option>
+                        </select>
                     </div>
                 </form>
             </div>

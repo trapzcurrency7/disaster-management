@@ -1,25 +1,48 @@
 <?php 
+// use App\Http\Controllers\Controller;
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+use App\Models\VictimModel;
 // namespace App\Helpers\Helper;
 
 class HomeController1 extends Controller{
 
 	public function __construct(){
-		$this->controller = new Controller;
+		$this->victimModel = new VictimModel;
 		$this->aboutController = new AboutController;
 	}
 
 	public function home(){
 
-		
 		$template['template'] = 'homeView.homeView';
 		return view('include.mainLayout',$template);
-		// $data['template'] = 'homeView.homeView';
-		// return view('include.mainLayout',$data);
+		
 	}	
-	public function saveVictimForm(){
-		print_r($_POST);
-		exit;
+	public function saveVictimForm(Request $request){
+
+		$postData = $request->input();
+		$data = "";
+
+		try {
+			if(!empty($postData)){
+
+				$data = array(
+							'address'=>$postData['address'],
+							'pincode'=>$postData['pincode'],
+							'disaster_type'=>$postData['disasterType']
+				      	);
+			}
+
+			$data = $this->victimModel->saveDisasterDetails($data);
+
+			$getDetails = $this->victimModel->getDetails($data);
+			$response  = array('success'=>true,'statusMsg'=>"Saved successfully",'data'=>$getDetails);
+			
+		} catch (Exception $e) {
+			$response  = array('success'=>true,'statusMsg'=>"Something went wrong");
+		}
+		
+		return $response;
 
 	}
 	

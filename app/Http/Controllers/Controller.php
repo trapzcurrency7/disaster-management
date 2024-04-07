@@ -5,9 +5,6 @@ namespace App\Http\Controllers;
 class Controller
 {
     public function __construct(){
-        // headers('XSRF-TOKEN',csrf_token());
-      
-        // header("XSRF-TOKEN",csrf_token());
        
     }
     

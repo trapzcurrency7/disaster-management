@@ -532,10 +532,14 @@ class ComposerStaticInit968f73bcf5520ee401d641d0d79555ec
 
     public static $classMap = array (
         'App\\Http\\Controllers\\AboutController' => __DIR__ . '/../..' . '/app/Http/Controllers/AboutController.php',
+        'App\\Http\\Controllers\\AdminController' => __DIR__ . '/../..' . '/app/Http/Controllers/AdminController.php',
         'App\\Http\\Controllers\\ContactController' => __DIR__ . '/../..' . '/app/Http/Controllers/ContactController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController1' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController1.php',
         'App\\Http\\Controllers\\ServicesController' => __DIR__ . '/../..' . '/app/Http/Controllers/ServicesController.php',
+        'App\\Http\\Middleware\\AddMyHeaders' => __DIR__ . '/../..' . '/app/Http/Middleware/AddMyHeaders.php',
+        'App\\Http\\Requests\\Auth\\CreateUserRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/CreateUserRequest.php',
+        'App\\Models\\NewModel' => __DIR__ . '/../..' . '/app/Models/NewModel.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
