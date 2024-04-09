@@ -37,20 +37,14 @@ function listComplaint(){
 		},
 		"iDisplayLength": 25,
 		"order": [
-			[1, "asc"]
+			[0, "asc"]
 		],
-        processing: true,
         serverSide: true,
         "destroy": true,
 		"processing": true,
-		'serverSide': true,
-		'serverMethod': 'POST',
 		"ajax": {
 			"url": base_url + '/getComplaints',
 		},
-		"drawCallback": function(settings, json) {
-
-		}
        
     });
 }

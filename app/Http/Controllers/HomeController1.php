@@ -50,7 +50,8 @@ class HomeController1 extends Controller{
 		$postData = $request->input();
 		
 		$getDetails = $this->victimModel->getDetails($postData);
-	
+		// print_r($getDetails);
+		// return json_encode($getDetails,true);
 		return response()->json($getDetails);
 		// print_r($getDetails);
 		// exit;

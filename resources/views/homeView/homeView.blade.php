@@ -4,6 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="<?=  csrf_token()?>">
     <title>Crowd Disaster Management</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -142,17 +144,15 @@
             </div>
         </div>
          <div class="row">
-                    <table id="datatable">
+                    <table id="datatable" class="table table-hover table-striped table-bordered dt-responsive" style="width:100%">
                         <thead>
-                            <tr>
-                                <th>Edit</th>
-                                <th>Pincode</th>
-                                <th>Disasster type</th>
-                                <th>Status</th>
-                            </tr>
+                            <th>Edit</th>
+                            <th>Pincode</th>
+                            <th>Disasster type</th>
+                            <th>Status</th>
                         </thead>
                         <tbody>
-                            <tr></tr>
+
                         </tbody>
                     </table>
                 </div>
@@ -185,9 +185,12 @@
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="<?=base_url('public/assets/js/common.js')?>"></script>
-<link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css" />
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
   
-<script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
 
 <script type="text/javascript">
             var pageType = "home";
