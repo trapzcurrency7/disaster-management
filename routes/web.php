@@ -10,6 +10,7 @@ use App\Http\Controllers\ContactController;
 
 Route::get('/', [HomeController1::class,'home']);
 Route::post('/saveVictimForm', [HomeController1::class,'saveVictimForm']);
+Route::post('/getComplaints', [HomeController1::class,'getComplaints']);
 
 // About
 Route::get('/about', [AboutController::class,'home']);

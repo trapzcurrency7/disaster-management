@@ -35,7 +35,7 @@ class HomeController1 extends Controller{
 
 			$data = $this->victimModel->saveDisasterDetails($data);
 
-			$getDetails = $this->victimModel->getDetails($data);
+			
 			$response  = array('success'=>true,'statusMsg'=>"Saved successfully",'data'=>$getDetails);
 			
 		} catch (Exception $e) {
@@ -44,6 +44,16 @@ class HomeController1 extends Controller{
 		
 		return $response;
 
+	}
+
+	public function getComplaints(Request $request){
+		$postData = $request->input();
+		
+		$getDetails = $this->victimModel->getDetails($postData);
+	
+		return response()->json($getDetails);
+		// print_r($getDetails);
+		// exit;
 	}
 	
 }

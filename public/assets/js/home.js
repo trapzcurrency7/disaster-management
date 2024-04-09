@@ -1,5 +1,5 @@
 $(document).ready(function() {
-
+	listComplaint();
 	if(pageType=="home"){
 		$('#home').css('background-color','red');
 	}
@@ -22,6 +22,38 @@ $(document).ready(function() {
 	})
 
 })
+
+function listComplaint(){
+ 	$('#datatable').DataTable({
+ 		"pagingType": "full_numbers",
+		"lengthMenu": [
+			[10, 25, 50, 100, 200, 500],
+			[10, 25, 50, 100, 200, 500]
+		],
+		"responsive": true,
+		"language": {
+			"search": "_INPUT_",
+			"searchPlaceholder": "Search records",
+		},
+		"iDisplayLength": 25,
+		"order": [
+			[1, "asc"]
+		],
+        processing: true,
+        serverSide: true,
+        "destroy": true,
+		"processing": true,
+		'serverSide': true,
+		'serverMethod': 'POST',
+		"ajax": {
+			"url": base_url + '/getComplaints',
+		},
+		"drawCallback": function(settings, json) {
+
+		}
+       
+    });
+}
 
 function saveVictimForm() {
 	var formData = $('#formData').serializeArray();

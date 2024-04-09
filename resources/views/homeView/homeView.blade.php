@@ -138,9 +138,24 @@
                         </select>
                     </div>
                 </form>
+               
             </div>
         </div>
-
+         <div class="row">
+                    <table id="datatable">
+                        <thead>
+                            <tr>
+                                <th>Edit</th>
+                                <th>Pincode</th>
+                                <th>Disasster type</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr></tr>
+                        </tbody>
+                    </table>
+                </div>
         <div class="update-card">
             <div class="heading">
                 <h1>Scroll for Updates</h1>
@@ -163,15 +178,22 @@
 
 
 
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="<?=base_url('public/assets/js/common.js')?>"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css" />
+  
+<script src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+
 <script type="text/javascript">
-        // $(document).ready(function() {
             var pageType = "home";
+
+        // $(document).ready(function() {
+        //    $('#datatable').DataTable();
         // })
 </script>
     <script src="<?=base_url('/public/assets/libraries/bootbox.all.js')?>"></script>
