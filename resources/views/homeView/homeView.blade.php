@@ -4,8 +4,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="<?=  csrf_token()?>">
     <title>Crowd Disaster Management</title>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.3/css/dataTables.bootstrap5.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/2.0.3/css/dataTables.dataTables.min.css">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,6 +19,9 @@
             display: grid;
             place-items: center;
             
+        }
+        #dt-length-0{
+            width: 40%;
         }
 
         .main-card{
@@ -42,6 +45,7 @@
             grid-template-columns: 1fr 1fr;
                 margin: 1.5rem 1rem;
         }
+/*        .card-bottom1{}*/
         .headrM:hover{
             color: red;
         }
@@ -119,7 +123,6 @@
             </div>
             <div class="card-bottom victimForm">
                 <form id="formData">
-
                     <div class="address">
                         <label for="address"><strong>Address</strong></label>
                         <input type="text" class="address1" name="address" id="" placeholder="Enter your address">
@@ -143,19 +146,27 @@
                
             </div>
         </div>
-         <div class="row">
-                    <table id="datatable" class="table table-hover table-striped table-bordered dt-responsive" style="width:100%">
+        <div class="main-card">
+            <div class="card-top">
+                <h4 style="color: white;">Complaints</h4>
+            </div>
+            <div class="card-bottom1">
+                <div class="row" style="background-color: white;">
+                     <table id="datatable" class="display" width="100" style="width:100%;border-radius: 10px;">
                         <thead>
                             <th>Edit</th>
                             <th>Pincode</th>
+                            <th>Address</th>
                             <th>Disasster type</th>
-                            <th>Status</th>
                         </thead>
                         <tbody>
-
                         </tbody>
                     </table>
                 </div>
+               
+            </div>
+        </div> 
+            
         <div class="update-card">
             <div class="heading">
                 <h1>Scroll for Updates</h1>
@@ -176,9 +187,6 @@
 </body>
 </html>
 
-
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
   integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -186,20 +194,14 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="<?=base_url('public/assets/js/common.js')?>"></script>
 
-<script type="text/javascript" src="https://code.jquery.com/jquery-3.7.1.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/2.0.3/js/dataTables.js"></script>
-<script type="text/javascript" src="https://cdn.datatables.net/2.0.3/js/dataTables.bootstrap5.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/2.0.3/js/dataTables.min.js"></script>
+
   
 
 <script type="text/javascript">
-            var pageType = "home";
-
-        // $(document).ready(function() {
-        //    $('#datatable').DataTable();
-        // })
+    var pageType = "home";
 </script>
     <script src="<?=base_url('/public/assets/libraries/bootbox.all.js')?>"></script>
 <script src="<?=base_url('/public/assets/libraries/bootbox.all.min.js')?>"></script>
-<script src="<?=base_url('public/assets/js/home.js')?>"></script>
+<script src="<?=base_url('/public/assets/js/home.js')?>"></script>
 

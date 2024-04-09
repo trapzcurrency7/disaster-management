@@ -1,10 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class VolunteerController extends BaseAdminController
 {
     public function __construct(){
 		// $user = $this->User;
@@ -12,9 +13,9 @@ class AdminController extends Controller
 		// $controller = $this->controller;
 	}
 
-	public function admin(){
+	public function listVolunteer(){
 			
-		$data['template'] = 'admin.admin';
+		$data['template'] = 'admin.volunteer.listVolunteer';
 		return view('include.adminLayout',$data);
 	}
 }

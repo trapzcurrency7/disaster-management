@@ -37,14 +37,33 @@ function listComplaint(){
 		},
 		"iDisplayLength": 25,
 		"order": [
-			[0, "asc"]
+			[1, "asc"]
 		],
-        serverSide: true,
         "destroy": true,
 		"processing": true,
+		'serverSide': true,
+		'serverMethod': 'POST',
+		"columnDefs": [
+			{	
+				"targets":[0,1,2,3],
+						"className": "dt-head-center"
+		    },
+		    {	
+				"targets":[0,1,2,3],
+						"className": "text-center"
+		    },
+	        { "targets": [0, 1],
+	        			 visible: true
+			},
+
+	    ],
 		"ajax": {
 			"url": base_url + '/getComplaints',
 		},
+		"drawCallback": function(settings, json) {
+			console.log(settings);
+
+		}
        
     });
 }
@@ -89,11 +108,17 @@ function saveVictimForm() {
 			type:'POST',
 			contentType:'application/json',
 			success:function(response) {
+
 				bootbox.alert({
 						message:response.statusMsg,
 						closeButton:false,
+						callBack:function() {
+							if(response.success){
+								listComplaint();
+							}
+						}
 					})
-					console.log(response.data)	
+					// console.log(response.listComplaint)	
 				
 			}
 		});

@@ -16,23 +16,22 @@ class VictimModel extends BaseModel {
 						"pincode",
 						"disaster_type"
 					);
+
+		$order = [array("column"=>0,"dir"=>"asc","name"=>"")];
 	 	$draw = $postData['draw']; 
-        $start = $postData['start']; // where to start next records for 
-        $rowPerPage = $postData['length']; // How many recods needed per 
-        $orderArray = $postData['order'];
-        $columnNameArray = $postData['columns']; // It will give us columns array
+        $start = $postData['start']; 
+        $rowPerPage = $postData['length']; 
+        $orderArray = isset($postData['order'])?$postData['order']:$order;
+       	
+        $columnNameArray = $postData['columns'];
                             
         $searchArray = $postData['search'];
         $columnIndex = $orderArray[0]['column'];
-        $columnName = $fileArray[$columnNameArray[$columnIndex]['data']]; // Here we will 
-        // print_r($columnName);
-        // exit;
-        $columnSortOrder = $orderArray[0]['dir']; // This 
-        $searchArrayValue = $searchArray['value']; // This is search value 
+        $columnName = $fileArray[$columnNameArray[$columnIndex]['data']]; 
+        $columnSortOrder = $orderArray[0]['dir']; 
+        $searchValue = $searchArray['value']; 
 
         $users = "";
-
-     	
 
         $users = DB::table('disaster');
         $total = $users->count();
@@ -55,15 +54,21 @@ class VictimModel extends BaseModel {
         $users = $users->get();
     	$data = [];
         foreach ($users as $value) {
-        	$data[] = $value->address;
+
+        	$data[] = $value->id;
         	$data[] = $value->pincode;
+        	$data[] = $value->address;
         	$data[] = $value->disaster_type;
+
+        	$mainData[] = $data;
+        	$data = "";
+        	$data = [];
         }
 		$response = array(
             "draw" => intval($draw),
             "recordsTotal" => $total,
             "recordsFiltered" => $totalFilter,
-            "data" => $data,
+            "data" => $mainData,
         );
 
 		return $response;

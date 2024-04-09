@@ -9,7 +9,9 @@
 		       xhr.setRequestHeader("X-CSRF-TOKEN",$('#csrfTokenId').val());        
 		    }
 		});
+		// Till here
 
+		
 		if(pageType=="home"){
 			$('#home').css({'background-color':'red',
 						});
