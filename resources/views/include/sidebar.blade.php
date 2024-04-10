@@ -76,7 +76,7 @@
           <div class="profile-details">
             <img src="../img/perfil.jpg" alt="profileImg">
             <div class="name_job">
-              <div class="name">Lucas Araújo</div>
+              <div class="name">Log out</div>
               <div class="job">Dev</div>
             </div>
           </div>

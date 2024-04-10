@@ -35,7 +35,7 @@ function listComplaint(){
 			"search": "_INPUT_",
 			"searchPlaceholder": "Search records",
 		},
-		"iDisplayLength": 25,
+		"iDisplayLength": 10,
 		"order": [
 			[1, "asc"]
 		],
@@ -112,7 +112,7 @@ function saveVictimForm() {
 				bootbox.alert({
 						message:response.statusMsg,
 						closeButton:false,
-						callBack:function() {
+						callback:function() {
 							if(response.success){
 								listComplaint();
 							}

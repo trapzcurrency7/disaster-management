@@ -26,14 +26,15 @@ class AdminController extends BaseAdminController
 			$id = $request->session()->get("user_id");
 		}
 
-		if(!empty($id)){
-			$data['adminData'] = $this->adminModel->getUser($id);
+		// if(!empty($id)){
+		// 	$data['adminData'] = $this->adminModel->getUser($id);
 			$data['template'] = 'admin.dashboard';
 			return view('include.adminLayout',$data);
-		}else{
-			// $data['template'] = 'admin.dashboard';
-			return view('login');
-		}	
+		// }else{
+		// 	// $data['template'] = 'admin.dashboard';
+		// 	// redirect
+		// 	return redirect('login');
+		// }	
 		
 	}
 }

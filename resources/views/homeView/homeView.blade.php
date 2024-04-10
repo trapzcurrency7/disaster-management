@@ -30,7 +30,7 @@
             width: 80%;
             background-color: rgb(39, 38, 38);
             padding: 1rem;
-            margin: 2rem 0rem;
+            margin: 2rem 0rem 0rem 0rem;
             border-radius: 1rem;
         }
 
@@ -43,9 +43,8 @@
         .card-bottom{
             display: grid;
             grid-template-columns: 1fr 1fr;
-                margin: 1.5rem 1rem;
+                margin: 1.5rem 0rem;
         }
-/*        .card-bottom1{}*/
         .headrM:hover{
             color: red;
         }
@@ -65,7 +64,7 @@
             border: none;
             padding: 0.2rem 0.5rem;
         }
-        button{
+        .saveVictimForm{
             padding: 0.4rem 3rem;
             border-radius: 0.5rem;
             background-color: whitesmoke;
@@ -147,12 +146,12 @@
             </div>
         </div>
         <div class="main-card">
-            <div class="card-top">
+            <div class="card-top mb-4">
                 <h4 style="color: white;">Complaints</h4>
             </div>
             <div class="card-bottom1">
-                <div class="row" style="background-color: white;">
-                     <table id="datatable" class="display" width="100" style="width:100%;border-radius: 10px;">
+                <div class="row" style="background-color: white;border-radius: 10px;">
+                     <table id="datatable" class="display" width="100" style="width:100%;">
                         <thead>
                             <th>Edit</th>
                             <th>Pincode</th>

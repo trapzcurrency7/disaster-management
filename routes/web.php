@@ -1,4 +1,6 @@
 <?php
+use Illuminate\Session\Middleware\StartSession;
+use Illuminate\View\Middleware\ShareErrorsFromSession;
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController1;
@@ -8,6 +10,8 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Admin\VolunteerController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\LoginController;
+use App\Http\Middleware\ValidateLogin;
+
 
 
 
@@ -26,9 +30,18 @@ Route::get('/services', [ServicesController::class,'home']);
 Route::get('/contact', [ContactController::class,'home']);
 
 
-// Admin
-Route::get('/admin/dashboard', [AdminController::class,'admin']);
-Route::get('/admin/volunteers', [VolunteerController::class,'listVolunteer']);
+// Only if the user is logged in then only this views will
+Route::group([ValidateLogin::class=>['web']],function(){
+
+ 	Route::get('/admin/dashboard', [AdminController::class,'admin']);
+	Route::get('/admin/volunteers', [VolunteerController::class,'listVolunteer']);
+
+});
+
+
+// Route::get('/login', [LoginController::class,'loginView'])->withoutMiddleware([ValidateLogin::class]);
+ 
+
 
 //Login
 Route::get('/login', [LoginController::class,'loginView']);

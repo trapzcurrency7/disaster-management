@@ -70,38 +70,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="row text-center mt-4">
-                    <div class="col-md-6">
-                        <img src="https://picsum.photos/200/300">
+                <?php
+                $i=300;
+                for ($i = 300; $i <320 ; ++$i) {
+                    ?>
+                    <div class="row text-center mt-4">
+                        <div class="col-md-6">
+                            <img src="<?="https://picsum.photos/250/".$i ?>" style="aspect-ratio: 2/2; object-fit: contain;">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="<?="https://picsum.photos/251/".$i ?>">
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                        <img src="https://picsum.photos/200/300">
-                    </div>
-                </div>
-                <div class="row text-center mt-4">
-                    <div class="col-md-6">
-                        <img src="https://picsum.photos/200/300">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="https://picsum.photos/200/300">
-                    </div>
-                </div>
-                <div class="row text-center mt-4">
-                    <div class="col-md-6">
-                        <img src="https://picsum.photos/200/300">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="https://picsum.photos/200/300">
-                    </div>
-                </div>
-                <div class="row text-center mt-4">
-                    <div class="col-md-6">
-                        <img src="https://picsum.photos/200/300">
-                    </div>
-                    <div class="col-md-6">
-                        <img src="https://picsum.photos/200/300">
-                    </div>
-                </div>
+                  <?php
+                }
+                ?>
             </div>
        </div>
     </div>

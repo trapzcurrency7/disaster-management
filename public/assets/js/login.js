@@ -4,8 +4,10 @@ $(document).ready(function() {
 	    beforeSend: function (xhr)
 	    {
 	       xhr.setRequestHeader("X-CSRF-TOKEN",$('#csrfTokenId').val());        
+	       xhr.setRequestHeader("X-CSRF-TOKEN",$('#csrfTokenId').val());        
 	    }
 	});
+	
 	// Till here
 	
 	$('.login').on('click',function() {
