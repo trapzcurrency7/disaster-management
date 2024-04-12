@@ -55,6 +55,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 
 Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
 
+https://lucid.app/lucidchart/6b48fc90-6f69-4779-849d-201a19012a41/edit?viewport_loc=-1090%2C-164%2C3241%2C1431%2C0_0&invitationId=inv_50ce92a3-0250-46b9-b38e-4cc035b8236b // This link is important
+
 ## Code of Conduct
 
 In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
